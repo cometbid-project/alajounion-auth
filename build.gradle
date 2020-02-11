@@ -1,0 +1,69 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.2.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'com.alajounion.api.secure'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+	compile.exclude module: 'spring-boot-starter-tomcat'
+    compile.exclude group: 'org.apache.tomcat'
+}
+
+repositories {
+	mavenCentral()
+	mavenLocal()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	// implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	// compile group: 'org.springframework.session', name: 'spring-session-data-mongodb'
+    // compile group: 'org.springframework.boot', name: 'spring-boot-devtools'	
+	
+	implementation('org.springframework.boot:spring-boot-starter-validation')
+	
+	compile group: 'javax.validation', name: 'validation-api', version: '2.0.0.Final'
+	compile group: 'org.hibernate', name: 'hibernate-validator', version: '6.0.16.Final'	
+	compile group: 'org.hibernate.validator', name: 'hibernate-validator-annotation-processor', version: '6.0.16.Final'
+	compile group: 'javax.el', name: 'javax.el-api', version: '3.0.0'
+	compile group: 'org.glassfish.web', name: 'javax.el', version: '2.2.6'
+
+	compile group: 'com.vladmihalcea', name: 'db-util', version: '0.0.1'
+
+	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+	// https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 
+	compile group: 'org.apache.commons', name: 'commons-collections4', version: '4.0'
+	 
+	// https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt
+	compile group: 'org.springframework.retry', name: 'spring-retry', version: '1.1.5.RELEASE'	
+	compile group: 'org.springframework', name: 'spring-aspects'
+	compile group:'com.cometbid.project', name:'cometbid-common-spring-boot-starter', version: '0.0.1-SNAPSHOT'
+	compile group:'com.cometbid.project', name:'cometbid-security-spring-boot-starter', version: '0.0.1-SNAPSHOT'
+	  
+	compileOnly 'org.projectlombok:lombok'  
+	runtimeOnly 'com.h2database:h2'     
+	//runtimeOnly 'mysql:mysql-connector-java'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	testImplementation 'de.flapdoodle.embed:de.flapdoodle.embed.mongo'
+	testImplementation 'io.projectreactor:reactor-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+}
+
+test {
+	useJUnitPlatform()
+}

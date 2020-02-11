@@ -1,0 +1,57 @@
+{"properties": [
+  {
+    "name": "auth.params.maximum_login_attempt",
+    "type": "java.lang.String",
+    "description": "A description for 'auth.params.maximum_login_attempt'"
+  },
+  {
+    "name": "auth.params.password_expiration",
+    "type": "java.lang.String",
+    "description": "A description for 'auth.params.password_expiration'"
+  },
+  {
+    "name": "auth.params.failed_login_expiration",
+    "type": "java.lang.String",
+    "description": "A description for 'auth.params.failed_login_expiration'"
+  },
+  {
+    "name": "auth.params.success_login_deletion",
+    "type": "java.lang.String",
+    "description": "A description for 'auth.params.success_login_deletion'"
+  },
+  {
+    "name": "auth.params.failed_login_deletion",
+    "type": "java.lang.String",
+    "description": "A description for 'auth.params.failed_login_deletion'"
+  },
+  {
+    "name": "auth.params.max_password_history",
+    "type": "java.lang.String",
+    "description": "A description for 'auth.params.max_password_history'"
+  },
+  {
+    "name": "springbootwebfluxjjwt.password.encoder.secret",
+    "type": "java.lang.String",
+    "description": "A description for 'springbootwebfluxjjwt.password.encoder.secret'"
+  },
+  {
+    "name": "springbootwebfluxjjwt.password.encoder.iteration",
+    "type": "java.lang.String",
+    "description": "A description for 'springbootwebfluxjjwt.password.encoder.iteration'"
+  },
+  {
+    "name": "springbootwebfluxjjwt.password.encoder.keylength",
+    "type": "java.lang.String",
+    "description": "A description for 'springbootwebfluxjjwt.password.encoder.keylength'"
+  },
+  {
+    "name": "springbootwebfluxjjwt.jjwt.secret",
+    "type": "java.lang.String",
+    "description": "A description for 'springbootwebfluxjjwt.jjwt.secret'"
+  },
+  {
+    "name": "springbootwebfluxjjwt.jjwt.expiration",
+    "type": "java.lang.String",
+    "description": "A description for 'springbootwebfluxjjwt.jjwt.expiration'"
+  }
+]}
